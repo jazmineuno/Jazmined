@@ -1,0 +1,24 @@
+// Copyright 2018 Waitman Gobble
+// Copyright (c) 2011-2016 The Cryptonote developers
+// Distributed under the MIT/X11 software license, see the accompanying
+// file COPYING or http://www.opensource.org/licenses/mit-license.php.
+
+#pragma once
+
+#include <assert.h>
+#include <stdlib.h>
+// http://stackoverflow.com/questions/1113409/attribute-constructor-equivalent-in-vc
+// http://msdn.microsoft.com/en-us/library/bb918180.aspx
+#pragma section(".CRT$XCT", read)
+#define INITIALIZER(name) \
+  static void __cdecl name(void); \
+  __declspec(allocate(".CRT$XCT")) void (__cdecl *const _##name)(void) = &name; \
+  static void __cdecl name(void)
+#define FINALIZER(name) \
+  static void __cdecl name(void)
+#define REGISTER_FINALIZER(name) \
+  do { \
+    int _res = atexit(name); \
+    assert(_res == 0); \
+  } while (0);
+

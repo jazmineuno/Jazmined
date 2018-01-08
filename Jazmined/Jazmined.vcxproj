@@ -1,0 +1,690 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{3FD57958-9511-4F87-BF99-3EAB95FB8DF8}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Jazmined</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions);_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="Account.h" />
+    <ClInclude Include="aesb.h" />
+    <ClInclude Include="alloca.h" />
+    <ClInclude Include="Base58.h" />
+    <ClInclude Include="BinaryInputStreamSerializer.h" />
+    <ClInclude Include="BinaryOutputStreamSerializer.h" />
+    <ClInclude Include="BinarySerializationTools.h" />
+    <ClInclude Include="blake256.h" />
+    <ClInclude Include="Blockchain.h" />
+    <ClInclude Include="BlockchainExplorer.h" />
+    <ClInclude Include="BlockchainExplorerData.h" />
+    <ClInclude Include="BlockchainExplorerErrors.h" />
+    <ClInclude Include="BlockchainIndices.h" />
+    <ClInclude Include="BlockchainMessages.h" />
+    <ClInclude Include="BlockchainMonitor.h" />
+    <ClInclude Include="BlockchainSynchronizer.h" />
+    <ClInclude Include="BlockIndex.h" />
+    <ClInclude Include="BlockingQueue.h" />
+    <ClInclude Include="chacha8.h" />
+    <ClInclude Include="Checkpoints.h" />
+    <ClInclude Include="CommandLine.h" />
+    <ClInclude Include="CommonLogger.h" />
+    <ClInclude Include="CommonTypes.h" />
+    <ClInclude Include="ConnectionContext.h" />
+    <ClInclude Include="ConsoleHandler.h" />
+    <ClInclude Include="ConsoleLogger.h" />
+    <ClInclude Include="ConsoleTools.h" />
+    <ClInclude Include="ContextGroup.h" />
+    <ClInclude Include="ContextGroupTimeout.h" />
+    <ClInclude Include="Core.h" />
+    <ClInclude Include="CoreConfig.h" />
+    <ClInclude Include="CoreRpcServerCommandsDefinitions.h" />
+    <ClInclude Include="CoreRpcServerErrorCodes.h" />
+    <ClInclude Include="crypto-ops.h" />
+    <ClInclude Include="crypto.h" />
+    <ClInclude Include="CryptoNote.h" />
+    <ClInclude Include="CryptoNoteBasic.h" />
+    <ClInclude Include="CryptoNoteBasicImpl.h" />
+    <ClInclude Include="CryptoNoteConfig.h" />
+    <ClInclude Include="CryptoNoteFormatUtils.h" />
+    <ClInclude Include="CryptoNoteProtocolDefinitions.h" />
+    <ClInclude Include="CryptoNoteProtocolHandler.h" />
+    <ClInclude Include="CryptoNoteProtocolHandlerCommon.h" />
+    <ClInclude Include="CryptoNoteSerialization.h" />
+    <ClInclude Include="CryptoNoteStatInfo.h" />
+    <ClInclude Include="CryptoNoteTools.h" />
+    <ClInclude Include="CryptoTypes.h" />
+    <ClInclude Include="Currency.h" />
+    <ClInclude Include="DaemonCommandsHandler.h" />
+    <ClInclude Include="densehashtable.h" />
+    <ClInclude Include="Difficulty.h" />
+    <ClInclude Include="Dispatcher.h" />
+    <ClInclude Include="ErrorMessage.h" />
+    <ClInclude Include="Event.h" />
+    <ClInclude Include="EventLock.h" />
+    <ClInclude Include="FileLogger.h" />
+    <ClInclude Include="Future.h" />
+    <ClInclude Include="generic-ops.h" />
+    <ClInclude Include="groestl.h" />
+    <ClInclude Include="groestl_tables.h" />
+    <ClInclude Include="hash-ops.h" />
+    <ClInclude Include="hash.h" />
+    <ClInclude Include="hashtable-common.h" />
+    <ClInclude Include="Context.h" />
+    <ClInclude Include="BlockchainExplorerDataBuilder.h" />
+    <ClInclude Include="IBlock.h" />
+    <ClInclude Include="IBlockchainExplorer.h" />
+    <ClInclude Include="IBlockChainStorageObserver.h" />
+    <ClInclude Include="ICoreObserver.h" />
+    <ClInclude Include="IMinerHandler.h" />
+    <ClInclude Include="ITimeProvider.h" />
+    <ClInclude Include="HttpClient.h" />
+    <ClInclude Include="HttpParser.h" />
+    <ClInclude Include="HttpParserErrorCodes.h" />
+    <ClInclude Include="HttpRequest.h" />
+    <ClInclude Include="HttpResponse.h" />
+    <ClInclude Include="HttpServer.h" />
+    <ClInclude Include="IBlockchainSynchronizer.h" />
+    <ClInclude Include="ICore.h" />
+    <ClInclude Include="ICryptoNoteProtocolObserver.h" />
+    <ClInclude Include="ICryptoNoteProtocolQuery.h" />
+    <ClInclude Include="IInputStream.h" />
+    <ClInclude Include="ILogger.h" />
+    <ClInclude Include="initializer.h" />
+    <ClInclude Include="INode.h" />
+    <ClInclude Include="int-util.h" />
+    <ClInclude Include="InterruptedException.h" />
+    <ClInclude Include="IntrusiveLinkedList.h" />
+    <ClInclude Include="IObservable.h" />
+    <ClInclude Include="IObservableImpl.h" />
+    <ClInclude Include="IOutputStream.h" />
+    <ClInclude Include="Ipv4Address.h" />
+    <ClInclude Include="Ipv4Resolver.h" />
+    <ClInclude Include="ISerializer.h" />
+    <ClInclude Include="IStreamSerializable.h" />
+    <ClInclude Include="ITransaction.h" />
+    <ClInclude Include="ITransactionValidator.h" />
+    <ClInclude Include="ITransfersContainer.h" />
+    <ClInclude Include="ITransfersSynchronizer.h" />
+    <ClInclude Include="ITxPoolObserver.h" />
+    <ClInclude Include="IWallet.h" />
+    <ClInclude Include="IWalletLegacy.h" />
+    <ClInclude Include="jh.h" />
+    <ClInclude Include="JsonInputStreamSerializer.h" />
+    <ClInclude Include="JsonInputValueSerializer.h" />
+    <ClInclude Include="JsonOutputStreamSerializer.h" />
+    <ClInclude Include="JsonRpc.h" />
+    <ClInclude Include="JsonValue.h" />
+    <ClInclude Include="keccak.h" />
+    <ClInclude Include="KeysStorage.h" />
+    <ClInclude Include="KVBinaryCommon.h" />
+    <ClInclude Include="KVBinaryInputStreamSerializer.h" />
+    <ClInclude Include="KVBinaryOutputStreamSerializer.h" />
+    <ClInclude Include="LegacyKeysImporter.h" />
+    <ClInclude Include="LevinProtocol.h" />
+    <ClInclude Include="libc_allocator_with_realloc.h" />
+    <ClInclude Include="LoggerGroup.h" />
+    <ClInclude Include="LoggerManager.h" />
+    <ClInclude Include="LoggerMessage.h" />
+    <ClInclude Include="LoggerRef.h" />
+    <ClInclude Include="Math.h" />
+    <ClInclude Include="MemoryInputStream.h" />
+    <ClInclude Include="MemoryStream.h" />
+    <ClInclude Include="MessageQueue.h" />
+    <ClInclude Include="Miner.h" />
+    <ClInclude Include="MinerConfig.h" />
+    <ClInclude Include="MinerEvent.h" />
+    <ClInclude Include="MinerManager.h" />
+    <ClInclude Include="MiningConfig.h" />
+    <ClInclude Include="miniupnpc\codelength.h" />
+    <ClInclude Include="miniupnpc\connecthostport.h" />
+    <ClInclude Include="miniupnpc\igd_desc_parse.h" />
+    <ClInclude Include="miniupnpc\minisoap.h" />
+    <ClInclude Include="miniupnpc\minissdpc.h" />
+    <ClInclude Include="miniupnpc\miniupnpc.h" />
+    <ClInclude Include="miniupnpc\miniupnpctypes.h" />
+    <ClInclude Include="miniupnpc\miniupnpc_declspec.h" />
+    <ClInclude Include="miniupnpc\miniwget.h" />
+    <ClInclude Include="miniupnpc\minixml.h" />
+    <ClInclude Include="miniupnpc\portlistingparse.h" />
+    <ClInclude Include="miniupnpc\receivedata.h" />
+    <ClInclude Include="miniupnpc\upnpcommands.h" />
+    <ClInclude Include="miniupnpc\upnpdev.h" />
+    <ClInclude Include="miniupnpc\upnperrors.h" />
+    <ClInclude Include="miniupnpc\upnpreplyparse.h" />
+    <ClInclude Include="NetNode.h" />
+    <ClInclude Include="NetNodeCommon.h" />
+    <ClInclude Include="NetNodeConfig.h" />
+    <ClInclude Include="NodeErrors.h" />
+    <ClInclude Include="NodeRpcProxy.h" />
+    <ClInclude Include="oaes_config.h" />
+    <ClInclude Include="oaes_lib.h" />
+    <ClInclude Include="ObserverManager.h" />
+    <ClInclude Include="OnceInInterval.h" />
+    <ClInclude Include="os_config.h" />
+    <ClInclude Include="P2pNetworks.h" />
+    <ClInclude Include="P2pProtocolDefinitions.h" />
+    <ClInclude Include="P2pProtocolTypes.h" />
+    <ClInclude Include="PasswordContainer.h" />
+    <ClInclude Include="PathTools.h" />
+    <ClInclude Include="PeerListManager.h" />
+    <ClInclude Include="random.h" />
+    <ClInclude Include="RpcServerConfig.h" />
+    <ClInclude Include="RemoteContext.h" />
+    <ClInclude Include="RpcServer.h" />
+    <ClInclude Include="SerializationOverloads.h" />
+    <ClInclude Include="SerializationTools.h" />
+    <ClInclude Include="ShuffleGenerator.h" />
+    <ClInclude Include="SignalHandler.h" />
+    <ClInclude Include="skein.h" />
+    <ClInclude Include="skein_port.h" />
+    <ClInclude Include="sparseconfig.h" />
+    <ClInclude Include="sparseconfig_win.h" />
+    <ClInclude Include="sparsehashtable.h" />
+    <ClInclude Include="sparsetable.h" />
+    <ClInclude Include="sparse_hash_map.h" />
+    <ClInclude Include="sparse_hash_set.h" />
+    <ClInclude Include="static_assert.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="StdInputStream.h" />
+    <ClInclude Include="StdOutputStream.h" />
+    <ClInclude Include="StreamLogger.h" />
+    <ClInclude Include="StreamTools.h" />
+    <ClInclude Include="StringOutputStream.h" />
+    <ClInclude Include="StringTools.h" />
+    <ClInclude Include="StringView.h" />
+    <ClInclude Include="SwappedVector.h" />
+    <ClInclude Include="SynchronizationState.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TcpConnection.h" />
+    <ClInclude Include="TcpConnector.h" />
+    <ClInclude Include="TcpListener.h" />
+    <ClInclude Include="TcpStream.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="TransactionApi.h" />
+    <ClInclude Include="TransactionApiExtra.h" />
+    <ClInclude Include="TransactionExtra.h" />
+    <ClInclude Include="TransactionPool.h" />
+    <ClInclude Include="TransactionUtils.h" />
+    <ClInclude Include="TransfersConsumer.h" />
+    <ClInclude Include="TransfersContainer.h" />
+    <ClInclude Include="TransfersSubscription.h" />
+    <ClInclude Include="TransfersSynchronizer.h" />
+    <ClInclude Include="TypeHelpers.h" />
+    <ClInclude Include="Util.h" />
+    <ClInclude Include="Varint.h" />
+    <ClInclude Include="VectorOutputStream.h" />
+    <ClInclude Include="VerificationContext.h" />
+    <ClInclude Include="version.h" />
+    <ClInclude Include="WalletAsyncContextCounter.h" />
+    <ClInclude Include="WalletErrors.h" />
+    <ClInclude Include="WalletHelper.h" />
+    <ClInclude Include="WalletLegacy.h" />
+    <ClInclude Include="WalletLegacyEvent.h" />
+    <ClInclude Include="WalletLegacySerialization.h" />
+    <ClInclude Include="WalletLegacySerializer.h" />
+    <ClInclude Include="WalletRequest.h" />
+    <ClInclude Include="WalletRpcServer.h" />
+    <ClInclude Include="WalletRpcServerCommandsDefinitions.h" />
+    <ClInclude Include="WalletRpcServerErrorCodes.h" />
+    <ClInclude Include="WalletSendTransactionContext.h" />
+    <ClInclude Include="WalletTransactionSender.h" />
+    <ClInclude Include="WalletUnconfirmedTransactions.h" />
+    <ClInclude Include="WalletUserTransactionsCache.h" />
+    <ClInclude Include="WalletUtils.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Account.cpp" />
+    <ClCompile Include="Base58.cpp" />
+    <ClCompile Include="BinaryInputStreamSerializer.cpp" />
+    <ClCompile Include="BinaryOutputStreamSerializer.cpp" />
+    <ClCompile Include="blake256.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Blockchain.cpp" />
+    <ClCompile Include="BlockchainExplorer.cpp" />
+    <ClCompile Include="BlockchainExplorerDataBuilder.cpp" />
+    <ClCompile Include="BlockchainExplorerErrors.cpp" />
+    <ClCompile Include="BlockchainIndices.cpp" />
+    <ClCompile Include="BlockchainMessages.cpp" />
+    <ClCompile Include="BlockchainMonitor.cpp" />
+    <ClCompile Include="BlockchainSynchronizer.cpp" />
+    <ClCompile Include="BlockIndex.cpp" />
+    <ClCompile Include="BlockingQueue.cpp" />
+    <ClCompile Include="chacha8.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Checkpoints.cpp" />
+    <ClCompile Include="CommandLine.cpp" />
+    <ClCompile Include="CommonLogger.cpp" />
+    <ClCompile Include="ConsoleHandler.cpp" />
+    <ClCompile Include="ConsoleLogger.cpp" />
+    <ClCompile Include="ConsoleTools.cpp" />
+    <ClCompile Include="ContextGroup.cpp" />
+    <ClCompile Include="ContextGroupTimeout.cpp" />
+    <ClCompile Include="Core.cpp" />
+    <ClCompile Include="CoreConfig.cpp" />
+    <ClCompile Include="crypto-ops-data.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="crypto-ops.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="crypto.cpp" />
+    <ClCompile Include="CryptoNoteBasic.cpp" />
+    <ClCompile Include="CryptoNoteBasicImpl.cpp" />
+    <ClCompile Include="CryptoNoteFormatUtils.cpp" />
+    <ClCompile Include="CryptoNoteProtocolHandler.cpp" />
+    <ClCompile Include="CryptoNoteSerialization.cpp" />
+    <ClCompile Include="CryptoNoteTools.cpp" />
+    <ClCompile Include="Currency.cpp" />
+    <ClCompile Include="DaemonCommandsHandler.cpp" />
+    <ClCompile Include="Difficulty.cpp" />
+    <ClCompile Include="Dispatcher.cpp" />
+    <ClCompile Include="ErrorMessage.cpp" />
+    <ClCompile Include="Event.cpp" />
+    <ClCompile Include="EventLock.cpp" />
+    <ClCompile Include="FileLogger.cpp" />
+    <ClCompile Include="groestl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="hash-extra-blake.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="hash-extra-groestl.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="hash-extra-jh.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="hash-extra-skein.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="hash.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="HttpClient.cpp" />
+    <ClCompile Include="HttpParser.cpp" />
+    <ClCompile Include="HttpParserErrorCodes.cpp" />
+    <ClCompile Include="HttpRequest.cpp" />
+    <ClCompile Include="HttpResponse.cpp" />
+    <ClCompile Include="HttpServer.cpp" />
+    <ClCompile Include="IBlock.cpp" />
+    <ClCompile Include="IInputStream.cpp" />
+    <ClCompile Include="ILogger.cpp" />
+    <ClCompile Include="InterruptedException.cpp" />
+    <ClCompile Include="IOutputStream.cpp" />
+    <ClCompile Include="Ipv4Address.cpp" />
+    <ClCompile Include="Ipv4Resolver.cpp" />
+    <ClCompile Include="Islow-hash.cpp" />
+    <ClCompile Include="ITimeProvider.cpp" />
+    <ClCompile Include="Jazmined.cpp" />
+    <ClCompile Include="jh.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="JsonInputStreamSerializer.cpp" />
+    <ClCompile Include="JsonInputValueSerializer.cpp" />
+    <ClCompile Include="JsonOutputStreamSerializer.cpp" />
+    <ClCompile Include="JsonRpc.cpp" />
+    <ClCompile Include="JsonValue.cpp" />
+    <ClCompile Include="keccak.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="KeysStorage.cpp" />
+    <ClCompile Include="KVBinaryInputStreamSerializer.cpp" />
+    <ClCompile Include="KVBinaryOutputStreamSerializer.cpp" />
+    <ClCompile Include="LegacyKeysImporter.cpp" />
+    <ClCompile Include="LevinProtocol.cpp" />
+    <ClCompile Include="LoggerGroup.cpp" />
+    <ClCompile Include="LoggerManager.cpp" />
+    <ClCompile Include="LoggerMessage.cpp" />
+    <ClCompile Include="LoggerRef.cpp" />
+    <ClCompile Include="Math.cpp" />
+    <ClCompile Include="MemoryInputStream.cpp" />
+    <ClCompile Include="MemoryStream.cpp" />
+    <ClCompile Include="Miner.cpp" />
+    <ClCompile Include="MinerConfig.cpp" />
+    <ClCompile Include="MinerManager.cpp" />
+    <ClCompile Include="MiningConfig.cpp" />
+    <ClCompile Include="miniupnpc\connecthostport.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\igd_desc_parse.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minisoap.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minissdpc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\miniupnpc.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\miniwget.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\minixml.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\portlistingparse.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\receivedata.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpcommands.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpdev.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnperrors.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="miniupnpc\upnpreplyparse.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="NetNode.cpp" />
+    <ClCompile Include="NetNodeConfig.cpp" />
+    <ClCompile Include="NodeErrors.cpp" />
+    <ClCompile Include="NodeRpcProxy.cpp" />
+    <ClCompile Include="oaes_lib.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PasswordContainer.cpp" />
+    <ClCompile Include="PathTools.cpp" />
+    <ClCompile Include="PeerListManager.cpp" />
+    <ClCompile Include="random.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="RpcServer.cpp" />
+    <ClCompile Include="RpcServerConfig.cpp" />
+    <ClCompile Include="SerializationOverloads.cpp" />
+    <ClCompile Include="SignalHandler.cpp" />
+    <ClCompile Include="skein.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="slow-hash.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="StdInputStream.cpp" />
+    <ClCompile Include="StdOutputStream.cpp" />
+    <ClCompile Include="StreamLogger.cpp" />
+    <ClCompile Include="StreamTools.cpp" />
+    <ClCompile Include="StringOutputStream.cpp" />
+    <ClCompile Include="StringTools.cpp" />
+    <ClCompile Include="StringView.cpp" />
+    <ClCompile Include="SwappedVector.cpp" />
+    <ClCompile Include="SynchronizationState.cpp" />
+    <ClCompile Include="TcpConnection.cpp" />
+    <ClCompile Include="TcpConnector.cpp" />
+    <ClCompile Include="TcpListener.cpp" />
+    <ClCompile Include="TcpStream.cpp" />
+    <ClCompile Include="Timer.cpp" />
+    <ClCompile Include="Transaction.cpp" />
+    <ClCompile Include="TransactionExtra.cpp" />
+    <ClCompile Include="TransactionPool.cpp" />
+    <ClCompile Include="TransactionPrefixImpl.cpp" />
+    <ClCompile Include="TransactionUtils.cpp" />
+    <ClCompile Include="TransfersConsumer.cpp" />
+    <ClCompile Include="TransfersContainer.cpp" />
+    <ClCompile Include="TransfersSubscription.cpp" />
+    <ClCompile Include="TransfersSynchronizer.cpp" />
+    <ClCompile Include="tree-hash.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Util.cpp" />
+    <ClCompile Include="VectorOutputStream.cpp" />
+    <ClCompile Include="WalletAsyncContextCounter.cpp" />
+    <ClCompile Include="WalletErrors.cpp" />
+    <ClCompile Include="WalletHelper.cpp" />
+    <ClCompile Include="WalletLegacy.cpp" />
+    <ClCompile Include="WalletLegacySerialization.cpp" />
+    <ClCompile Include="WalletLegacySerializer.cpp" />
+    <ClCompile Include="WalletRpcServer.cpp" />
+    <ClCompile Include="WalletTransactionSender.cpp" />
+    <ClCompile Include="WalletUnconfirmedTransactions.cpp" />
+    <ClCompile Include="WalletUserTransactionCache.cpp" />
+    <ClCompile Include="WalletUtils.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\boost.1.66.0.0\build\native\boost.targets" Condition="Exists('..\packages\boost.1.66.0.0\build\native\boost.targets')" />
+    <Import Project="..\packages\boost_atomic-vc141.1.66.0.0\build\native\boost_atomic-vc141.targets" Condition="Exists('..\packages\boost_atomic-vc141.1.66.0.0\build\native\boost_atomic-vc141.targets')" />
+    <Import Project="..\packages\boost_bzip2-vc141.1.66.0.0\build\native\boost_bzip2-vc141.targets" Condition="Exists('..\packages\boost_bzip2-vc141.1.66.0.0\build\native\boost_bzip2-vc141.targets')" />
+    <Import Project="..\packages\boost_chrono-vc141.1.66.0.0\build\native\boost_chrono-vc141.targets" Condition="Exists('..\packages\boost_chrono-vc141.1.66.0.0\build\native\boost_chrono-vc141.targets')" />
+    <Import Project="..\packages\boost_container-vc141.1.66.0.0\build\native\boost_container-vc141.targets" Condition="Exists('..\packages\boost_container-vc141.1.66.0.0\build\native\boost_container-vc141.targets')" />
+    <Import Project="..\packages\boost_context-vc141.1.66.0.0\build\native\boost_context-vc141.targets" Condition="Exists('..\packages\boost_context-vc141.1.66.0.0\build\native\boost_context-vc141.targets')" />
+    <Import Project="..\packages\boost_coroutine-vc141.1.66.0.0\build\native\boost_coroutine-vc141.targets" Condition="Exists('..\packages\boost_coroutine-vc141.1.66.0.0\build\native\boost_coroutine-vc141.targets')" />
+    <Import Project="..\packages\boost_date_time-vc141.1.66.0.0\build\native\boost_date_time-vc141.targets" Condition="Exists('..\packages\boost_date_time-vc141.1.66.0.0\build\native\boost_date_time-vc141.targets')" />
+    <Import Project="..\packages\boost_exception-vc141.1.66.0.0\build\native\boost_exception-vc141.targets" Condition="Exists('..\packages\boost_exception-vc141.1.66.0.0\build\native\boost_exception-vc141.targets')" />
+    <Import Project="..\packages\boost_fiber-vc141.1.66.0.0\build\native\boost_fiber-vc141.targets" Condition="Exists('..\packages\boost_fiber-vc141.1.66.0.0\build\native\boost_fiber-vc141.targets')" />
+    <Import Project="..\packages\boost_filesystem-vc141.1.66.0.0\build\native\boost_filesystem-vc141.targets" Condition="Exists('..\packages\boost_filesystem-vc141.1.66.0.0\build\native\boost_filesystem-vc141.targets')" />
+    <Import Project="..\packages\boost_graph-vc141.1.66.0.0\build\native\boost_graph-vc141.targets" Condition="Exists('..\packages\boost_graph-vc141.1.66.0.0\build\native\boost_graph-vc141.targets')" />
+    <Import Project="..\packages\boost_iostreams-vc141.1.66.0.0\build\native\boost_iostreams-vc141.targets" Condition="Exists('..\packages\boost_iostreams-vc141.1.66.0.0\build\native\boost_iostreams-vc141.targets')" />
+    <Import Project="..\packages\boost_locale-vc141.1.66.0.0\build\native\boost_locale-vc141.targets" Condition="Exists('..\packages\boost_locale-vc141.1.66.0.0\build\native\boost_locale-vc141.targets')" />
+    <Import Project="..\packages\boost_log-vc141.1.66.0.0\build\native\boost_log-vc141.targets" Condition="Exists('..\packages\boost_log-vc141.1.66.0.0\build\native\boost_log-vc141.targets')" />
+    <Import Project="..\packages\boost_log_setup-vc141.1.66.0.0\build\native\boost_log_setup-vc141.targets" Condition="Exists('..\packages\boost_log_setup-vc141.1.66.0.0\build\native\boost_log_setup-vc141.targets')" />
+    <Import Project="..\packages\boost_math_c99-vc141.1.66.0.0\build\native\boost_math_c99-vc141.targets" Condition="Exists('..\packages\boost_math_c99-vc141.1.66.0.0\build\native\boost_math_c99-vc141.targets')" />
+    <Import Project="..\packages\boost_math_c99f-vc141.1.66.0.0\build\native\boost_math_c99f-vc141.targets" Condition="Exists('..\packages\boost_math_c99f-vc141.1.66.0.0\build\native\boost_math_c99f-vc141.targets')" />
+    <Import Project="..\packages\boost_math_c99l-vc141.1.66.0.0\build\native\boost_math_c99l-vc141.targets" Condition="Exists('..\packages\boost_math_c99l-vc141.1.66.0.0\build\native\boost_math_c99l-vc141.targets')" />
+    <Import Project="..\packages\boost_math_tr1-vc141.1.66.0.0\build\native\boost_math_tr1-vc141.targets" Condition="Exists('..\packages\boost_math_tr1-vc141.1.66.0.0\build\native\boost_math_tr1-vc141.targets')" />
+    <Import Project="..\packages\boost_math_tr1f-vc141.1.66.0.0\build\native\boost_math_tr1f-vc141.targets" Condition="Exists('..\packages\boost_math_tr1f-vc141.1.66.0.0\build\native\boost_math_tr1f-vc141.targets')" />
+    <Import Project="..\packages\boost_math_tr1l-vc141.1.66.0.0\build\native\boost_math_tr1l-vc141.targets" Condition="Exists('..\packages\boost_math_tr1l-vc141.1.66.0.0\build\native\boost_math_tr1l-vc141.targets')" />
+    <Import Project="..\packages\boost_prg_exec_monitor-vc141.1.66.0.0\build\native\boost_prg_exec_monitor-vc141.targets" Condition="Exists('..\packages\boost_prg_exec_monitor-vc141.1.66.0.0\build\native\boost_prg_exec_monitor-vc141.targets')" />
+    <Import Project="..\packages\boost_program_options-vc141.1.66.0.0\build\native\boost_program_options-vc141.targets" Condition="Exists('..\packages\boost_program_options-vc141.1.66.0.0\build\native\boost_program_options-vc141.targets')" />
+    <Import Project="..\packages\boost_python-vc141.1.66.0.0\build\native\boost_python-vc141.targets" Condition="Exists('..\packages\boost_python-vc141.1.66.0.0\build\native\boost_python-vc141.targets')" />
+    <Import Project="..\packages\boost_random-vc141.1.66.0.0\build\native\boost_random-vc141.targets" Condition="Exists('..\packages\boost_random-vc141.1.66.0.0\build\native\boost_random-vc141.targets')" />
+    <Import Project="..\packages\boost_regex-vc141.1.66.0.0\build\native\boost_regex-vc141.targets" Condition="Exists('..\packages\boost_regex-vc141.1.66.0.0\build\native\boost_regex-vc141.targets')" />
+    <Import Project="..\packages\boost_serialization-vc141.1.66.0.0\build\native\boost_serialization-vc141.targets" Condition="Exists('..\packages\boost_serialization-vc141.1.66.0.0\build\native\boost_serialization-vc141.targets')" />
+    <Import Project="..\packages\boost_signals-vc141.1.66.0.0\build\native\boost_signals-vc141.targets" Condition="Exists('..\packages\boost_signals-vc141.1.66.0.0\build\native\boost_signals-vc141.targets')" />
+    <Import Project="..\packages\boost_stacktrace_noop-vc141.1.66.0.0\build\native\boost_stacktrace_noop-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_noop-vc141.1.66.0.0\build\native\boost_stacktrace_noop-vc141.targets')" />
+    <Import Project="..\packages\boost_stacktrace_windbg-vc141.1.66.0.0\build\native\boost_stacktrace_windbg-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_windbg-vc141.1.66.0.0\build\native\boost_stacktrace_windbg-vc141.targets')" />
+    <Import Project="..\packages\boost_stacktrace_windbg_cached-vc141.1.66.0.0\build\native\boost_stacktrace_windbg_cached-vc141.targets" Condition="Exists('..\packages\boost_stacktrace_windbg_cached-vc141.1.66.0.0\build\native\boost_stacktrace_windbg_cached-vc141.targets')" />
+    <Import Project="..\packages\boost_system-vc141.1.66.0.0\build\native\boost_system-vc141.targets" Condition="Exists('..\packages\boost_system-vc141.1.66.0.0\build\native\boost_system-vc141.targets')" />
+    <Import Project="..\packages\boost_test_exec_monitor-vc141.1.66.0.0\build\native\boost_test_exec_monitor-vc141.targets" Condition="Exists('..\packages\boost_test_exec_monitor-vc141.1.66.0.0\build\native\boost_test_exec_monitor-vc141.targets')" />
+    <Import Project="..\packages\boost_thread-vc141.1.66.0.0\build\native\boost_thread-vc141.targets" Condition="Exists('..\packages\boost_thread-vc141.1.66.0.0\build\native\boost_thread-vc141.targets')" />
+    <Import Project="..\packages\boost_timer-vc141.1.66.0.0\build\native\boost_timer-vc141.targets" Condition="Exists('..\packages\boost_timer-vc141.1.66.0.0\build\native\boost_timer-vc141.targets')" />
+    <Import Project="..\packages\boost_type_erasure-vc141.1.66.0.0\build\native\boost_type_erasure-vc141.targets" Condition="Exists('..\packages\boost_type_erasure-vc141.1.66.0.0\build\native\boost_type_erasure-vc141.targets')" />
+    <Import Project="..\packages\boost_unit_test_framework-vc141.1.66.0.0\build\native\boost_unit_test_framework-vc141.targets" Condition="Exists('..\packages\boost_unit_test_framework-vc141.1.66.0.0\build\native\boost_unit_test_framework-vc141.targets')" />
+    <Import Project="..\packages\boost_wave-vc141.1.66.0.0\build\native\boost_wave-vc141.targets" Condition="Exists('..\packages\boost_wave-vc141.1.66.0.0\build\native\boost_wave-vc141.targets')" />
+    <Import Project="..\packages\boost_wserialization-vc141.1.66.0.0\build\native\boost_wserialization-vc141.targets" Condition="Exists('..\packages\boost_wserialization-vc141.1.66.0.0\build\native\boost_wserialization-vc141.targets')" />
+    <Import Project="..\packages\boost_zlib-vc141.1.66.0.0\build\native\boost_zlib-vc141.targets" Condition="Exists('..\packages\boost_zlib-vc141.1.66.0.0\build\native\boost_zlib-vc141.targets')" />
+    <Import Project="..\packages\boost-vc141.1.66.0.0\build\native\boost-vc141.targets" Condition="Exists('..\packages\boost-vc141.1.66.0.0\build\native\boost-vc141.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\boost.1.66.0.0\build\native\boost.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost.1.66.0.0\build\native\boost.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_atomic-vc141.1.66.0.0\build\native\boost_atomic-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_atomic-vc141.1.66.0.0\build\native\boost_atomic-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_bzip2-vc141.1.66.0.0\build\native\boost_bzip2-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_bzip2-vc141.1.66.0.0\build\native\boost_bzip2-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_chrono-vc141.1.66.0.0\build\native\boost_chrono-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_chrono-vc141.1.66.0.0\build\native\boost_chrono-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_container-vc141.1.66.0.0\build\native\boost_container-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_container-vc141.1.66.0.0\build\native\boost_container-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_context-vc141.1.66.0.0\build\native\boost_context-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_context-vc141.1.66.0.0\build\native\boost_context-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_coroutine-vc141.1.66.0.0\build\native\boost_coroutine-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_coroutine-vc141.1.66.0.0\build\native\boost_coroutine-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_date_time-vc141.1.66.0.0\build\native\boost_date_time-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_date_time-vc141.1.66.0.0\build\native\boost_date_time-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_exception-vc141.1.66.0.0\build\native\boost_exception-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_exception-vc141.1.66.0.0\build\native\boost_exception-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_fiber-vc141.1.66.0.0\build\native\boost_fiber-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_fiber-vc141.1.66.0.0\build\native\boost_fiber-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_filesystem-vc141.1.66.0.0\build\native\boost_filesystem-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_filesystem-vc141.1.66.0.0\build\native\boost_filesystem-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_graph-vc141.1.66.0.0\build\native\boost_graph-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_graph-vc141.1.66.0.0\build\native\boost_graph-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_iostreams-vc141.1.66.0.0\build\native\boost_iostreams-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_iostreams-vc141.1.66.0.0\build\native\boost_iostreams-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_locale-vc141.1.66.0.0\build\native\boost_locale-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_locale-vc141.1.66.0.0\build\native\boost_locale-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_log-vc141.1.66.0.0\build\native\boost_log-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_log-vc141.1.66.0.0\build\native\boost_log-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_log_setup-vc141.1.66.0.0\build\native\boost_log_setup-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_log_setup-vc141.1.66.0.0\build\native\boost_log_setup-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_c99-vc141.1.66.0.0\build\native\boost_math_c99-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99-vc141.1.66.0.0\build\native\boost_math_c99-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_c99f-vc141.1.66.0.0\build\native\boost_math_c99f-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99f-vc141.1.66.0.0\build\native\boost_math_c99f-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_c99l-vc141.1.66.0.0\build\native\boost_math_c99l-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_c99l-vc141.1.66.0.0\build\native\boost_math_c99l-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_tr1-vc141.1.66.0.0\build\native\boost_math_tr1-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1-vc141.1.66.0.0\build\native\boost_math_tr1-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_tr1f-vc141.1.66.0.0\build\native\boost_math_tr1f-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1f-vc141.1.66.0.0\build\native\boost_math_tr1f-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_math_tr1l-vc141.1.66.0.0\build\native\boost_math_tr1l-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_math_tr1l-vc141.1.66.0.0\build\native\boost_math_tr1l-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_prg_exec_monitor-vc141.1.66.0.0\build\native\boost_prg_exec_monitor-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_prg_exec_monitor-vc141.1.66.0.0\build\native\boost_prg_exec_monitor-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_program_options-vc141.1.66.0.0\build\native\boost_program_options-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_program_options-vc141.1.66.0.0\build\native\boost_program_options-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_python-vc141.1.66.0.0\build\native\boost_python-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_python-vc141.1.66.0.0\build\native\boost_python-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_random-vc141.1.66.0.0\build\native\boost_random-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_random-vc141.1.66.0.0\build\native\boost_random-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_regex-vc141.1.66.0.0\build\native\boost_regex-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_regex-vc141.1.66.0.0\build\native\boost_regex-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_serialization-vc141.1.66.0.0\build\native\boost_serialization-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_serialization-vc141.1.66.0.0\build\native\boost_serialization-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_signals-vc141.1.66.0.0\build\native\boost_signals-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_signals-vc141.1.66.0.0\build\native\boost_signals-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_stacktrace_noop-vc141.1.66.0.0\build\native\boost_stacktrace_noop-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_noop-vc141.1.66.0.0\build\native\boost_stacktrace_noop-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_stacktrace_windbg-vc141.1.66.0.0\build\native\boost_stacktrace_windbg-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_windbg-vc141.1.66.0.0\build\native\boost_stacktrace_windbg-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_stacktrace_windbg_cached-vc141.1.66.0.0\build\native\boost_stacktrace_windbg_cached-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_stacktrace_windbg_cached-vc141.1.66.0.0\build\native\boost_stacktrace_windbg_cached-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_system-vc141.1.66.0.0\build\native\boost_system-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_system-vc141.1.66.0.0\build\native\boost_system-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_test_exec_monitor-vc141.1.66.0.0\build\native\boost_test_exec_monitor-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_test_exec_monitor-vc141.1.66.0.0\build\native\boost_test_exec_monitor-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_thread-vc141.1.66.0.0\build\native\boost_thread-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_thread-vc141.1.66.0.0\build\native\boost_thread-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_timer-vc141.1.66.0.0\build\native\boost_timer-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_timer-vc141.1.66.0.0\build\native\boost_timer-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_type_erasure-vc141.1.66.0.0\build\native\boost_type_erasure-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_type_erasure-vc141.1.66.0.0\build\native\boost_type_erasure-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_unit_test_framework-vc141.1.66.0.0\build\native\boost_unit_test_framework-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_unit_test_framework-vc141.1.66.0.0\build\native\boost_unit_test_framework-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_wave-vc141.1.66.0.0\build\native\boost_wave-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_wave-vc141.1.66.0.0\build\native\boost_wave-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_wserialization-vc141.1.66.0.0\build\native\boost_wserialization-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_wserialization-vc141.1.66.0.0\build\native\boost_wserialization-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost_zlib-vc141.1.66.0.0\build\native\boost_zlib-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost_zlib-vc141.1.66.0.0\build\native\boost_zlib-vc141.targets'))" />
+    <Error Condition="!Exists('..\packages\boost-vc141.1.66.0.0\build\native\boost-vc141.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\boost-vc141.1.66.0.0\build\native\boost-vc141.targets'))" />
+  </Target>
+</Project>
